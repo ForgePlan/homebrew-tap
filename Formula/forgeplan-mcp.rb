@@ -1,25 +1,25 @@
 class ForgeplanMcp < Formula
   desc "MCP server for Forgeplan — expose artifact tools via Model Context Protocol"
   homepage "https://github.com/ForgePlan/forgeplan"
-  version "0.22.1"
+  version "0.23.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.22.1/forgeplan-mcp-aarch64-apple-darwin.tar.xz"
-      sha256 "508f81c7322ad91444012a5abe1ae1172d62f91eb58920911e1c4c3162b42e3c"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.23.0/forgeplan-mcp-aarch64-apple-darwin.tar.xz"
+      sha256 "c20fa8be7b15ae2bc226b951c4cfdeace96dc2bd33e2ddd94d15737febe361ab"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.22.1/forgeplan-mcp-x86_64-apple-darwin.tar.xz"
-      sha256 "f22de297203714e57ad0b30f4417c780f8d45ab53b61dd2ccc94319a99974038"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.23.0/forgeplan-mcp-x86_64-apple-darwin.tar.xz"
+      sha256 "405828adc63588d9cf32f8a37621b48cd487d133b0daa611453e8613b06a3bab"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.22.1/forgeplan-mcp-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "9951e6530d0b6cc36d06880593ac3895dda3a45953dd9337a5f1fe0d23e8b91b"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.23.0/forgeplan-mcp-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6211b0c4423d072f9b4db4dc87aef3101ab1956a630204ad5b0c1d39fb0b69ce"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.22.1/forgeplan-mcp-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1e08ea40a334b0ecef25d17272cb25a0502476497c7303117267e608b233399b"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.23.0/forgeplan-mcp-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c87d45e3f2a0c0f7472a9266cc2ba447d33b1ab6e3400e92a78cf7e3e0d85bb4"
     end
   end
   license "MIT"
