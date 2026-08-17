@@ -1,25 +1,25 @@
 class ForgeplanMcp < Formula
   desc "MCP server for Forgeplan — expose artifact tools via Model Context Protocol"
   homepage "https://github.com/ForgePlan/forgeplan"
-  version "0.33.0"
+  version "0.34.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.33.0/forgeplan-mcp-aarch64-apple-darwin.tar.xz"
-      sha256 "0ad803c6a9c28ab6bfcc94a39163ee2948bfe5a768e68488d61617d9121ab783"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.34.0/forgeplan-mcp-aarch64-apple-darwin.tar.xz"
+      sha256 "4eb6d1fb6b4e9f367bb0a642a269d1a1ebad9dd79d3dce097b66d38c14cbc998"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.33.0/forgeplan-mcp-x86_64-apple-darwin.tar.xz"
-      sha256 "71663a789c3476d3ea112609b46560e75cf7091231335e4064aab0acb38cdb6e"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.34.0/forgeplan-mcp-x86_64-apple-darwin.tar.xz"
+      sha256 "778146b4e033560792faf1217eb0425051cf437d506831acb2aced82b4bd7c1d"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.33.0/forgeplan-mcp-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "001ecef388675e308159a344fe4199e6cb2ba07a3dd79d4211314368e79a295d"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.34.0/forgeplan-mcp-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9272c4310e00c800ae41155cadbe88c00ca1bc7042011acf8ef2b7fa5e5080df"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.33.0/forgeplan-mcp-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "634fa0e7c6ecc520a6962a92aec6e0ddf375c2467fdfb75dafc1ab4512684d71"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.34.0/forgeplan-mcp-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b705a92169dffce199fa78bde0a8b5ca2c3c3ebe4b56fe60095bf9c971f1700d"
     end
   end
   license "MIT"
@@ -68,10 +68,18 @@ class ForgeplanMcp < Formula
   end
 
   def install
-    bin.install "forgeplan-mcp" if OS.mac? && Hardware::CPU.arm?
-    bin.install "forgeplan-mcp" if OS.mac? && Hardware::CPU.intel?
-    bin.install "forgeplan-mcp" if OS.linux? && Hardware::CPU.arm?
-    bin.install "forgeplan-mcp" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "forgeplan-mcp"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "forgeplan-mcp"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "forgeplan-mcp"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "forgeplan-mcp"
+    end
 
     install_binary_aliases!
 
