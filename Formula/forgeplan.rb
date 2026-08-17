@@ -1,25 +1,25 @@
 class Forgeplan < Formula
   desc "CLI for Forgeplan — forge your plan from idea to implementation"
   homepage "https://github.com/ForgePlan/forgeplan"
-  version "0.33.0"
+  version "0.34.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.33.0/forgeplan-aarch64-apple-darwin.tar.xz"
-      sha256 "50ccab15b5fc883405d421e36b4a34792a2439d6c4f0c0ad0df5b332a58f4e17"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.34.0/forgeplan-aarch64-apple-darwin.tar.xz"
+      sha256 "9aec4843371fcf007281c212e845782819ff3a9995888b9f4442d6b3a7fd334d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.33.0/forgeplan-x86_64-apple-darwin.tar.xz"
-      sha256 "b50fbcbef871432347ad987b69a3cda3d46efe8359a47173f193a315945c019e"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.34.0/forgeplan-x86_64-apple-darwin.tar.xz"
+      sha256 "9be4c04d46254e1f1ef2483de3c8be1d3449e284b26e880577baa3312c54eb13"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.33.0/forgeplan-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f9e451973b0882e7ea793ddd04f4d92c6a95c64b79b99583fc9f176be298e89e"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.34.0/forgeplan-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "69ad13b8709b61b57f9aaa490b6863fbea55d98d3006a65affb580283fb7ac68"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.33.0/forgeplan-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "fe99b836ea393326508b2c5ece7b1a3e73025f9021bc7729d8a5a342997d1744"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.34.0/forgeplan-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "497992c93e9aee277e4a99abb2faa3f7b55cefa500a3013b5ee4c8e99ed38aa1"
     end
   end
   license "MIT"
@@ -68,10 +68,18 @@ class Forgeplan < Formula
   end
 
   def install
-    bin.install "forgeplan" if OS.mac? && Hardware::CPU.arm?
-    bin.install "forgeplan" if OS.mac? && Hardware::CPU.intel?
-    bin.install "forgeplan" if OS.linux? && Hardware::CPU.arm?
-    bin.install "forgeplan" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "forgeplan"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "forgeplan"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "forgeplan"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "forgeplan"
+    end
 
     install_binary_aliases!
 
