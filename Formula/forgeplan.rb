@@ -1,25 +1,25 @@
 class Forgeplan < Formula
   desc "CLI for Forgeplan — forge your plan from idea to implementation"
   homepage "https://github.com/ForgePlan/forgeplan"
-  version "0.36.0"
+  version "0.37.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.36.0/forgeplan-aarch64-apple-darwin.tar.xz"
-      sha256 "00de2a5e423735b651e82072b0bc3b9677f6c4d75a5943ef886d06252dc4896e"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.37.0/forgeplan-aarch64-apple-darwin.tar.xz"
+      sha256 "70a81930555a074f9181103e2a6cb60999cbb32db8f0e062e1bf700a2a078af7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.36.0/forgeplan-x86_64-apple-darwin.tar.xz"
-      sha256 "a595c24435748685ac91a656943b92c514659d3a6d301c9d56852de20b1979db"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.37.0/forgeplan-x86_64-apple-darwin.tar.xz"
+      sha256 "cbf476cdd62a1883d34912af878963c9873c741a561e6277eba50f0fc45d9ddd"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.36.0/forgeplan-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f1058c48045ebeaf31caa86296d05217997f76a27dc7b3295170c8b52450e23d"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.37.0/forgeplan-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8a99ad0b00dec035c5e8b1ccc4b77fd4518893c8c7c2ad304302ed08d1276ddb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.36.0/forgeplan-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "963e3dc918675e7a0d8caea0d601990e84725326a5de7e58ec16f19173d4bbe8"
+      url "https://github.com/ForgePlan/forgeplan/releases/download/v0.37.0/forgeplan-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d59ce22028986d4f8eb72df68c8f139ce6e23ceda15bf62d2c8e76ad348c5b39"
     end
   end
   license "MIT"
